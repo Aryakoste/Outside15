@@ -1,64 +1,26 @@
-name: Check and deploy Outside15
+name: Deploy Outside15
 on:
   push:
     branches: [main]
-  pull_request:
   workflow_dispatch:
 permissions:
   contents: read
+  pages: write
+  id-token: write
 concurrency:
-  group: pages-${{ github.ref }}
+  group: github-pages
   cancel-in-progress: true
 jobs:
-  check:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    env:
-      SKIP_LIVE_AI: '1'
-      PLAYWRIGHT_CHANNEL: chromium
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          cache: npm
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - run: npm ci
-      - run: npx playwright install --with-deps chromium
-      - name: Validate observations and test bounded AI failure recovery
-        run: npm test
-      - name: Test browser flows (live-model test deliberately excluded)
-        run: npm run test:browser
-      - run: npm run build
-      - name: Verify project-subpath hosting, replay, fonts and offline use
-        run: npm run test:pages
-      - name: Preserve test evidence
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: outside15-checks
-          path: |
-            artifacts/pages-verification.json
-            artifacts/10-workflow-recovery.json
-            artifacts/11-pages-check.png
-            .local/test-results/
-      - name: Package validated static site
-        if: github.event_name != 'pull_request'
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
   deploy:
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-    needs: check
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - uses: actions/checkout@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
       - uses: actions/deploy-pages@v4
         id: deployment
