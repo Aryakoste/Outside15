@@ -1,0 +1,22 @@
+{
+  "name": "outside15",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A little outside. A little good. Local-first outdoor breaks with open-weight AI observations.",
+  "scripts": {
+    "dev": "python server.py",
+    "build": "node scripts/build.mjs",
+    "test": "python -m unittest discover -s tests -v && node --test tests/workflow.test.mjs",
+    "demo": "node scripts/capture-demo.mjs",
+    "test:browser": "playwright test",
+    "test:pages": "node scripts/test-pages.mjs",
+    "evaluate": "python scripts/evaluate.py"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.58.2"
+  },
+  "dependencies": {
+    "@mastra/core": "1.47.0",
+    "zod": "3.25.76"
+  }
+}

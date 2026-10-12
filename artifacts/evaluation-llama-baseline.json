@@ -1,0 +1,223 @@
+{
+  "model": "llama3.2",
+  "passed": 8,
+  "total": 8,
+  "cases": [
+    {
+      "amenity": "entrance",
+      "note": "The east entrance has no steps and the gate is open. The path is clear, but there is no shade.",
+      "expected": {
+        "status": "usable",
+        "step_free": "yes",
+        "shade": "no"
+      },
+      "result": {
+        "amenity": "entrance",
+        "status": "usable",
+        "step_free": "yes",
+        "shade": "no",
+        "summary": "East entrance with no steps, open gate, and clear path.",
+        "evidence": "The east entrance has no steps and the gate is open. The path is clear, but there is no shade.",
+        "model": "llama3.2",
+        "latency_ms": 3547,
+        "source": "live",
+        "inference": {
+          "eval_count": 74,
+          "prompt_eval_count": 498,
+          "total_duration_ns": 3514279900
+        }
+      },
+      "passed": true,
+      "mismatches": {}
+    },
+    {
+      "amenity": "bench",
+      "note": "The bench is broken and cannot be used.",
+      "expected": {
+        "status": "unusable",
+        "step_free": "unknown",
+        "shade": "unknown"
+      },
+      "result": {
+        "amenity": "bench",
+        "status": "unusable",
+        "step_free": "unknown",
+        "shade": "unknown",
+        "summary": "Broken bench.",
+        "evidence": "The bench is broken and cannot be used.",
+        "model": "llama3.2",
+        "latency_ms": 2594,
+        "source": "live",
+        "inference": {
+          "eval_count": 50,
+          "prompt_eval_count": 483,
+          "total_duration_ns": 2590337000
+        }
+      },
+      "passed": true,
+      "mismatches": {}
+    },
+    {
+      "amenity": "water",
+      "note": "I could not tell if the tap works.",
+      "expected": {
+        "status": "uncertain",
+        "step_free": "unknown",
+        "shade": "unknown"
+      },
+      "result": {
+        "amenity": "water",
+        "status": "uncertain",
+        "step_free": "unknown",
+        "shade": "unknown",
+        "summary": "Uncertain water tap.",
+        "evidence": "I could not tell if the tap works.",
+        "model": "llama3.2",
+        "latency_ms": 2672,
+        "source": "live",
+        "inference": {
+          "eval_count": 52,
+          "prompt_eval_count": 483,
+          "total_duration_ns": 2672433000
+        }
+      },
+      "passed": true,
+      "mismatches": {}
+    },
+    {
+      "amenity": "entrance",
+      "note": "The gate is open but there are three steps at the entrance.",
+      "expected": {
+        "status": "usable",
+        "step_free": "no",
+        "shade": "unknown"
+      },
+      "result": {
+        "amenity": "entrance",
+        "status": "usable",
+        "step_free": "no",
+        "shade": "unknown",
+        "summary": "Open gate with three steps at the entrance.",
+        "evidence": "The gate is open but there are three steps at the entrance.",
+        "model": "llama3.2",
+        "latency_ms": 3140,
+        "source": "live",
+        "inference": {
+          "eval_count": 60,
+          "prompt_eval_count": 488,
+          "total_duration_ns": 3129225500
+        }
+      },
+      "passed": true,
+      "mismatches": {}
+    },
+    {
+      "amenity": "bench",
+      "note": "I saw a bench.",
+      "expected": {
+        "status": "uncertain",
+        "step_free": "unknown",
+        "shade": "unknown"
+      },
+      "result": {
+        "amenity": "bench",
+        "status": "uncertain",
+        "step_free": "unknown",
+        "shade": "unknown",
+        "summary": "Bench observed.",
+        "evidence": "I saw a bench.",
+        "model": "llama3.2",
+        "latency_ms": 2438,
+        "source": "live",
+        "inference": {
+          "eval_count": 47,
+          "prompt_eval_count": 479,
+          "total_duration_ns": 2441210600
+        }
+      },
+      "passed": true,
+      "mismatches": {}
+    },
+    {
+      "amenity": "footpath",
+      "note": "The footpath is blocked by rubble and cannot be passed.",
+      "expected": {
+        "status": "unusable",
+        "step_free": "unknown",
+        "shade": "unknown"
+      },
+      "result": {
+        "amenity": "footpath",
+        "status": "unusable",
+        "step_free": "unknown",
+        "shade": "unknown",
+        "summary": "Footpath blocked by rubble.",
+        "evidence": "The footpath is blocked by rubble and cannot be passed.",
+        "model": "llama3.2",
+        "latency_ms": 2984,
+        "source": "live",
+        "inference": {
+          "eval_count": 57,
+          "prompt_eval_count": 487,
+          "total_duration_ns": 2982388400
+        }
+      },
+      "passed": true,
+      "mismatches": {}
+    },
+    {
+      "amenity": "bench",
+      "note": "The bench is usable and in the shade.",
+      "expected": {
+        "status": "usable",
+        "step_free": "unknown",
+        "shade": "yes"
+      },
+      "result": {
+        "amenity": "bench",
+        "status": "usable",
+        "step_free": "unknown",
+        "shade": "yes",
+        "summary": "Usable bench in the shade.",
+        "evidence": "The bench is usable and in the shade.",
+        "model": "llama3.2",
+        "latency_ms": 2735,
+        "source": "live",
+        "inference": {
+          "eval_count": 53,
+          "prompt_eval_count": 483,
+          "total_duration_ns": 2735180500
+        }
+      },
+      "passed": true,
+      "mismatches": {}
+    },
+    {
+      "amenity": "water",
+      "note": "The drinking water tap is working. I did not check the water quality.",
+      "expected": {
+        "status": "usable",
+        "step_free": "unknown",
+        "shade": "unknown"
+      },
+      "result": {
+        "amenity": "water",
+        "status": "usable",
+        "step_free": "unknown",
+        "shade": "unknown",
+        "summary": "Working drinking water tap.",
+        "evidence": "The drinking water tap is working. I did not check the water quality.",
+        "model": "llama3.2",
+        "latency_ms": 3000,
+        "source": "live",
+        "inference": {
+          "eval_count": 57,
+          "prompt_eval_count": 489,
+          "total_duration_ns": 3004973100
+        }
+      },
+      "passed": true,
+      "mismatches": {}
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+import { defineConfig } from '@playwright/test';
+export default defineConfig({testDir:'./tests',testMatch:'browser.spec.mjs',timeout:120000,workers:1,reporter:'list',use:{baseURL:'http://127.0.0.1:5173',headless:true,channel:process.env.PLAYWRIGHT_CHANNEL||'msedge',serviceWorkers:'block',viewport:{width:1440,height:1000}},webServer:{command:'python server.py',url:'http://127.0.0.1:5173',reuseExistingServer:!process.env.CI,timeout:30000},outputDir:'.local/test-results'});

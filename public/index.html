@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#204a3a">
+  <meta name="description" content="Take a short outdoor break. Leave your neighbourhood a little better. Local-first, open-weight AI turns small observations into useful community knowledge.">
+  <title>Outside15 — A little outside. A little good.</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header class="site-header"><div class="header-inner">
+    <a href="#break" class="brand" aria-label="Outside15 home"><span class="brand-icon"><svg viewBox="0 0 32 32" fill="none"><path d="M8 24c0-10 5-17 18-18 0 12-6 18-15 18" fill="currentColor"/><path d="m7 27 14-15" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span><span>outside<span class="brand-number">15</span><span class="brand-dot">.</span></span></a>
+    <nav aria-label="Main navigation"><a href="#break" data-nav="break" class="active">Your break</a><a href="#neighbourhood" data-nav="neighbourhood">Neighbourhood</a><a href="#impact" data-nav="impact">Your impact</a></nav>
+    <button class="header-help" data-action="how" aria-label="How it works"><span class="help-circle">?</span> How it works</button>
+  </div></header>
+  <main id="main" tabindex="-1"></main>
+  <footer><a class="footer-brand" href="#break">Small breaks. Shared good.</a><span>Made for the world beyond your screen.</span><button data-action="about">Open by nature <span aria-hidden="true">↗</span></button></footer>
+  <dialog id="modal" aria-labelledby="modal-title"></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

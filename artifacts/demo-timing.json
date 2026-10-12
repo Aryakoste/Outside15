@@ -1,0 +1,65 @@
+{
+  "duration_ms": 70442,
+  "captions": [
+    {
+      "at": 2194,
+      "title": "A little outside. A little good.",
+      "sub": "Product walkthrough · illustrative data · outdoor break simulated"
+    },
+    {
+      "at": 5775,
+      "title": "5, 15, or 30 minutes. Make the break fit your day.",
+      "sub": "Product walkthrough · illustrative data · outdoor break simulated"
+    },
+    {
+      "at": 10151,
+      "title": "One optional mission. One useful thing to notice.",
+      "sub": "Product walkthrough · illustrative data · outdoor break simulated"
+    },
+    {
+      "at": 14096,
+      "title": "Put the phone away. This is where the real break happens.",
+      "sub": "Product walkthrough · illustrative data · outdoor break simulated"
+    },
+    {
+      "at": 19341,
+      "title": "Come back with a sentence. Your words stay on this computer.",
+      "sub": "Product walkthrough · illustrative data · outdoor break simulated"
+    },
+    {
+      "at": 22883,
+      "title": "Real open-weight AI, running locally through Ollama.",
+      "sub": "Live Gemma 3 4B · Mastra workflow · no paid API key"
+    },
+    {
+      "at": 44175,
+      "title": "Mastra checks the draft. You review and confirm.",
+      "sub": "Local Gemma agent · exact evidence check · bounded retry · no automatic saving"
+    },
+    {
+      "at": 49285,
+      "title": "See who it could help: parents with strollers and people avoiding steps.",
+      "sub": "Product walkthrough · illustrative data · outdoor break simulated"
+    },
+    {
+      "at": 53900,
+      "title": "No leaderboard. Just the useful things you chose to notice.",
+      "sub": "Product walkthrough · illustrative data · outdoor break simulated"
+    },
+    {
+      "at": 57592,
+      "title": "Dated observations. Human review. Export on your terms.",
+      "sub": "Product walkthrough · illustrative data · outdoor break simulated"
+    },
+    {
+      "at": 61933,
+      "title": "Use a real outdoor spot you know. No GPS required.",
+      "sub": "Product walkthrough · illustrative data · outdoor break simulated"
+    },
+    {
+      "at": 65935,
+      "title": "Outside15 · Small breaks. Shared good.",
+      "sub": "Local-first · Open-weight AI · Built for the world beyond your screen"
+    }
+  ]
+}

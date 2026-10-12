@@ -1,0 +1,23 @@
+{
+  "note": "The east entrance has no steps and the gate is open. The path is clear, but there is no shade.",
+  "model": "llama3.2",
+  "latency_ms": 27734,
+  "recorded_at": "2026-10-11T14:03:48.585484+00:00",
+  "recording_kind": "Genuine local Ollama inference; replay is not live inference",
+  "result": {
+    "amenity": "entrance",
+    "status": "usable",
+    "step_free": "yes",
+    "shade": "no",
+    "summary": "East entrance with no steps, open gate, and clear path.",
+    "evidence": "The east entrance has no steps and the gate is open. The path is clear, but there is no shade.",
+    "model": "llama3.2",
+    "latency_ms": 27734,
+    "source": "live",
+    "inference": {
+      "eval_count": 74,
+      "prompt_eval_count": 498,
+      "total_duration_ns": 27710170700
+    }
+  }
+}

@@ -1,0 +1,361 @@
+{
+  "recorded_at": "2026-10-12T04:42:56.174654+00:00",
+  "model": "gemma3:4b",
+  "workflow": "Mastra",
+  "passed": 8,
+  "total": 8,
+  "cases": [
+    {
+      "amenity": "entrance",
+      "note": "The east entrance has no steps and the gate is open. The path is clear, but there is no shade.",
+      "expected": {
+        "status": "usable",
+        "step_free": "yes",
+        "shade": "no"
+      },
+      "result": {
+        "amenity": "entrance",
+        "status": "usable",
+        "step_free": "yes",
+        "shade": "no",
+        "summary": "East entrance has no steps and the gate is open. Path is clear with no shade.",
+        "evidence": "The east entrance has no steps and the gate is open. The path is clear, but there is no shade.",
+        "model": "gemma3:4b",
+        "latency_ms": 97992,
+        "source": "live",
+        "inference": {
+          "eval_count": 78,
+          "prompt_eval_count": 483,
+          "agent": "outside15-observer",
+          "transport": "local Ollama OpenAI-compatible API"
+        },
+        "workflow": {
+          "engine": "Mastra",
+          "id": "outside15-observation",
+          "attempts": 1,
+          "human_review_required": true,
+          "events": [
+            {
+              "stage": "extract-and-ground",
+              "outcome": "validated"
+            },
+            {
+              "stage": "prepare-human-review",
+              "outcome": "ready"
+            }
+          ]
+        }
+      },
+      "passed": true,
+      "mismatches": {}
+    },
+    {
+      "amenity": "bench",
+      "note": "The bench is broken and cannot be used.",
+      "expected": {
+        "status": "unusable",
+        "step_free": "unknown",
+        "shade": "unknown"
+      },
+      "result": {
+        "amenity": "bench",
+        "status": "unusable",
+        "step_free": "unknown",
+        "shade": "unknown",
+        "summary": "Bench is broken and unusable.",
+        "evidence": "The bench is broken and cannot be used.",
+        "model": "gemma3:4b",
+        "latency_ms": 6896,
+        "source": "live",
+        "inference": {
+          "eval_count": 53,
+          "prompt_eval_count": 469,
+          "agent": "outside15-observer",
+          "transport": "local Ollama OpenAI-compatible API"
+        },
+        "workflow": {
+          "engine": "Mastra",
+          "id": "outside15-observation",
+          "attempts": 1,
+          "human_review_required": true,
+          "events": [
+            {
+              "stage": "extract-and-ground",
+              "outcome": "validated"
+            },
+            {
+              "stage": "prepare-human-review",
+              "outcome": "ready"
+            }
+          ]
+        }
+      },
+      "passed": true,
+      "mismatches": {}
+    },
+    {
+      "amenity": "water",
+      "note": "I could not tell if the tap works.",
+      "expected": {
+        "status": "uncertain",
+        "step_free": "unknown",
+        "shade": "unknown"
+      },
+      "result": {
+        "amenity": "water",
+        "status": "uncertain",
+        "step_free": "unknown",
+        "shade": "unknown",
+        "summary": "Tap status is uncertain.",
+        "evidence": "I could not tell if the tap works.",
+        "model": "gemma3:4b",
+        "latency_ms": 7733,
+        "source": "live",
+        "inference": {
+          "eval_count": 51,
+          "prompt_eval_count": 469,
+          "agent": "outside15-observer",
+          "transport": "local Ollama OpenAI-compatible API"
+        },
+        "workflow": {
+          "engine": "Mastra",
+          "id": "outside15-observation",
+          "attempts": 1,
+          "human_review_required": true,
+          "events": [
+            {
+              "stage": "extract-and-ground",
+              "outcome": "validated"
+            },
+            {
+              "stage": "prepare-human-review",
+              "outcome": "ready"
+            }
+          ]
+        }
+      },
+      "passed": true,
+      "mismatches": {}
+    },
+    {
+      "amenity": "entrance",
+      "note": "The gate is open but there are three steps at the entrance.",
+      "expected": {
+        "status": "usable",
+        "step_free": "no",
+        "shade": "unknown"
+      },
+      "result": {
+        "amenity": "entrance",
+        "status": "usable",
+        "step_free": "no",
+        "shade": "unknown",
+        "summary": "Open gate with three steps at the entrance.",
+        "evidence": "The gate is open but there are three steps at the entrance.",
+        "model": "gemma3:4b",
+        "latency_ms": 8178,
+        "source": "live",
+        "inference": {
+          "eval_count": 59,
+          "prompt_eval_count": 473,
+          "agent": "outside15-observer",
+          "transport": "local Ollama OpenAI-compatible API"
+        },
+        "workflow": {
+          "engine": "Mastra",
+          "id": "outside15-observation",
+          "attempts": 1,
+          "human_review_required": true,
+          "events": [
+            {
+              "stage": "extract-and-ground",
+              "outcome": "validated"
+            },
+            {
+              "stage": "prepare-human-review",
+              "outcome": "ready"
+            }
+          ]
+        }
+      },
+      "passed": true,
+      "mismatches": {}
+    },
+    {
+      "amenity": "bench",
+      "note": "I saw a bench.",
+      "expected": {
+        "status": "uncertain",
+        "step_free": "unknown",
+        "shade": "unknown"
+      },
+      "result": {
+        "amenity": "bench",
+        "status": "uncertain",
+        "step_free": "unknown",
+        "shade": "unknown",
+        "summary": "A bench was observed.",
+        "evidence": "I saw a bench.",
+        "model": "gemma3:4b",
+        "latency_ms": 5879,
+        "source": "live",
+        "inference": {
+          "eval_count": 47,
+          "prompt_eval_count": 465,
+          "agent": "outside15-observer",
+          "transport": "local Ollama OpenAI-compatible API"
+        },
+        "workflow": {
+          "engine": "Mastra",
+          "id": "outside15-observation",
+          "attempts": 1,
+          "human_review_required": true,
+          "events": [
+            {
+              "stage": "extract-and-ground",
+              "outcome": "validated"
+            },
+            {
+              "stage": "prepare-human-review",
+              "outcome": "ready"
+            }
+          ]
+        }
+      },
+      "passed": true,
+      "mismatches": {}
+    },
+    {
+      "amenity": "footpath",
+      "note": "The footpath is blocked by rubble and cannot be passed.",
+      "expected": {
+        "status": "unusable",
+        "step_free": "unknown",
+        "shade": "unknown"
+      },
+      "result": {
+        "amenity": "footpath",
+        "status": "unusable",
+        "step_free": "unknown",
+        "shade": "unknown",
+        "summary": "Footpath is blocked by rubble.",
+        "evidence": "The footpath is blocked by rubble and cannot be passed.",
+        "model": "gemma3:4b",
+        "latency_ms": 6537,
+        "source": "live",
+        "inference": {
+          "eval_count": 57,
+          "prompt_eval_count": 472,
+          "agent": "outside15-observer",
+          "transport": "local Ollama OpenAI-compatible API"
+        },
+        "workflow": {
+          "engine": "Mastra",
+          "id": "outside15-observation",
+          "attempts": 1,
+          "human_review_required": true,
+          "events": [
+            {
+              "stage": "extract-and-ground",
+              "outcome": "validated"
+            },
+            {
+              "stage": "prepare-human-review",
+              "outcome": "ready"
+            }
+          ]
+        }
+      },
+      "passed": true,
+      "mismatches": {}
+    },
+    {
+      "amenity": "bench",
+      "note": "The bench is usable and in the shade.",
+      "expected": {
+        "status": "usable",
+        "step_free": "unknown",
+        "shade": "yes"
+      },
+      "result": {
+        "amenity": "bench",
+        "status": "usable",
+        "step_free": "unknown",
+        "shade": "yes",
+        "summary": "Bench is usable and in the shade.",
+        "evidence": "The bench is usable and in the shade.",
+        "model": "gemma3:4b",
+        "latency_ms": 6293,
+        "source": "live",
+        "inference": {
+          "eval_count": 54,
+          "prompt_eval_count": 469,
+          "agent": "outside15-observer",
+          "transport": "local Ollama OpenAI-compatible API"
+        },
+        "workflow": {
+          "engine": "Mastra",
+          "id": "outside15-observation",
+          "attempts": 1,
+          "human_review_required": true,
+          "events": [
+            {
+              "stage": "extract-and-ground",
+              "outcome": "validated"
+            },
+            {
+              "stage": "prepare-human-review",
+              "outcome": "ready"
+            }
+          ]
+        }
+      },
+      "passed": true,
+      "mismatches": {}
+    },
+    {
+      "amenity": "water",
+      "note": "The drinking water tap is working. I did not check the water quality.",
+      "expected": {
+        "status": "usable",
+        "step_free": "unknown",
+        "shade": "unknown"
+      },
+      "result": {
+        "amenity": "water",
+        "status": "usable",
+        "step_free": "unknown",
+        "shade": "unknown",
+        "summary": "Drinking water tap is working.",
+        "evidence": "The drinking water tap is working. I did not check the water quality.",
+        "model": "gemma3:4b",
+        "latency_ms": 7932,
+        "source": "live",
+        "inference": {
+          "eval_count": 58,
+          "prompt_eval_count": 475,
+          "agent": "outside15-observer",
+          "transport": "local Ollama OpenAI-compatible API"
+        },
+        "workflow": {
+          "engine": "Mastra",
+          "id": "outside15-observation",
+          "attempts": 1,
+          "human_review_required": true,
+          "events": [
+            {
+              "stage": "extract-and-ground",
+              "outcome": "validated"
+            },
+            {
+              "stage": "prepare-human-review",
+              "outcome": "ready"
+            }
+          ]
+        }
+      },
+      "passed": true,
+      "mismatches": {}
+    }
+  ]
+}

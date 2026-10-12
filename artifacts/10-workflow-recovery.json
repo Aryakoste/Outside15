@@ -1,0 +1,45 @@
+{
+  "recorded_at": "2026-10-12T04:43:35.566Z",
+  "kind": "Controlled failure injection, followed by genuine local model inference",
+  "injected_first_attempt": true,
+  "first_attempt_is_not_a_real_model_output": true,
+  "note": "The bench is broken and cannot be used.",
+  "result": {
+    "amenity": "bench",
+    "status": "unusable",
+    "step_free": "unknown",
+    "shade": "unknown",
+    "summary": "Bench is broken and unusable.",
+    "evidence": "The bench is broken and cannot be used.",
+    "model": "gemma3:4b",
+    "latency_ms": 6323,
+    "source": "live",
+    "inference": {
+      "eval_count": 53,
+      "prompt_eval_count": 489,
+      "agent": "outside15-observer",
+      "transport": "local Ollama OpenAI-compatible API"
+    },
+    "workflow": {
+      "engine": "Mastra",
+      "id": "outside15-observation",
+      "attempts": 2,
+      "human_review_required": true,
+      "events": [
+        {
+          "stage": "extract-and-ground",
+          "outcome": "rejected"
+        },
+        {
+          "stage": "extract-and-ground",
+          "outcome": "validated"
+        },
+        {
+          "stage": "prepare-human-review",
+          "outcome": "ready"
+        }
+      ]
+    }
+  },
+  "observations_saved_by_workflow": 0
+}

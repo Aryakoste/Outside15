@@ -1,0 +1,234 @@
+{
+  "recorded_at": "2026-10-12T04:19:27.822509+00:00",
+  "model": "gemma3:1b",
+  "workflow": "Mastra",
+  "passed": 3,
+  "total": 8,
+  "cases": [
+    {
+      "amenity": "entrance",
+      "note": "The east entrance has no steps and the gate is open. The path is clear, but there is no shade.",
+      "expected": {
+        "status": "usable",
+        "step_free": "yes",
+        "shade": "no"
+      },
+      "result": {
+        "amenity": "entrance",
+        "status": "usable",
+        "step_free": "no",
+        "shade": "unknown",
+        "summary": "East entrance with no steps, open gate, clear path, no shade.",
+        "evidence": "The east entrance has no steps and the gate is open.",
+        "model": "gemma3:1b",
+        "latency_ms": 15046,
+        "source": "live",
+        "inference": {
+          "eval_count": 64,
+          "prompt_eval_count": 480,
+          "total_duration_ns": 14991615500
+        },
+        "workflow": {
+          "engine": "Mastra",
+          "id": "outside15-observation",
+          "attempts": 1,
+          "human_review_required": true,
+          "events": [
+            {
+              "stage": "extract-and-ground",
+              "outcome": "validated"
+            },
+            {
+              "stage": "prepare-human-review",
+              "outcome": "ready"
+            }
+          ]
+        }
+      },
+      "passed": false,
+      "mismatches": {
+        "step_free": {
+          "expected": "yes",
+          "actual": "no"
+        },
+        "shade": {
+          "expected": "no",
+          "actual": "unknown"
+        }
+      }
+    },
+    {
+      "amenity": "bench",
+      "note": "The bench is broken and cannot be used.",
+      "expected": {
+        "status": "unusable",
+        "step_free": "unknown",
+        "shade": "unknown"
+      },
+      "result": {
+        "amenity": "bench",
+        "status": "unusable",
+        "step_free": "unknown",
+        "shade": "unknown",
+        "summary": "Bench is broken and unusable.",
+        "evidence": "The bench is broken and cannot be used.",
+        "model": "gemma3:1b",
+        "latency_ms": 1406,
+        "source": "live",
+        "inference": {
+          "eval_count": 53,
+          "prompt_eval_count": 466,
+          "total_duration_ns": 1383314900
+        },
+        "workflow": {
+          "engine": "Mastra",
+          "id": "outside15-observation",
+          "attempts": 1,
+          "human_review_required": true,
+          "events": [
+            {
+              "stage": "extract-and-ground",
+              "outcome": "validated"
+            },
+            {
+              "stage": "prepare-human-review",
+              "outcome": "ready"
+            }
+          ]
+        }
+      },
+      "passed": true,
+      "mismatches": {}
+    },
+    {
+      "amenity": "water",
+      "note": "I could not tell if the tap works.",
+      "expected": {
+        "status": "uncertain",
+        "step_free": "unknown",
+        "shade": "unknown"
+      },
+      "passed": false,
+      "error": "Local AI failed validation after a bounded retry. Please edit your words or use manual entry."
+    },
+    {
+      "amenity": "entrance",
+      "note": "The gate is open but there are three steps at the entrance.",
+      "expected": {
+        "status": "usable",
+        "step_free": "no",
+        "shade": "unknown"
+      },
+      "passed": false,
+      "error": "Local AI failed validation after a bounded retry. Please edit your words or use manual entry."
+    },
+    {
+      "amenity": "bench",
+      "note": "I saw a bench.",
+      "expected": {
+        "status": "uncertain",
+        "step_free": "unknown",
+        "shade": "unknown"
+      },
+      "passed": false,
+      "error": "Local AI failed validation after a bounded retry. Please edit your words or use manual entry."
+    },
+    {
+      "amenity": "footpath",
+      "note": "The footpath is blocked by rubble and cannot be passed.",
+      "expected": {
+        "status": "unusable",
+        "step_free": "unknown",
+        "shade": "unknown"
+      },
+      "passed": false,
+      "error": "Local AI failed validation after a bounded retry. Please edit your words or use manual entry."
+    },
+    {
+      "amenity": "bench",
+      "note": "The bench is usable and in the shade.",
+      "expected": {
+        "status": "usable",
+        "step_free": "unknown",
+        "shade": "yes"
+      },
+      "result": {
+        "amenity": "bench",
+        "status": "usable",
+        "step_free": "unknown",
+        "shade": "yes",
+        "summary": "The bench is usable and in the shade.",
+        "evidence": "The bench is usable and in the shade.",
+        "model": "gemma3:1b",
+        "latency_ms": 1562,
+        "source": "live",
+        "inference": {
+          "eval_count": 55,
+          "prompt_eval_count": 466,
+          "total_duration_ns": 1538806900
+        },
+        "workflow": {
+          "engine": "Mastra",
+          "id": "outside15-observation",
+          "attempts": 1,
+          "human_review_required": true,
+          "events": [
+            {
+              "stage": "extract-and-ground",
+              "outcome": "validated"
+            },
+            {
+              "stage": "prepare-human-review",
+              "outcome": "ready"
+            }
+          ]
+        }
+      },
+      "passed": true,
+      "mismatches": {}
+    },
+    {
+      "amenity": "water",
+      "note": "The drinking water tap is working. I did not check the water quality.",
+      "expected": {
+        "status": "usable",
+        "step_free": "unknown",
+        "shade": "unknown"
+      },
+      "result": {
+        "amenity": "water",
+        "status": "usable",
+        "step_free": "unknown",
+        "shade": "unknown",
+        "summary": "Drinking water tap is working.",
+        "evidence": "The drinking water tap is working.",
+        "model": "gemma3:1b",
+        "latency_ms": 1391,
+        "source": "live",
+        "inference": {
+          "eval_count": 50,
+          "prompt_eval_count": 472,
+          "total_duration_ns": 1371588900
+        },
+        "workflow": {
+          "engine": "Mastra",
+          "id": "outside15-observation",
+          "attempts": 1,
+          "human_review_required": true,
+          "events": [
+            {
+              "stage": "extract-and-ground",
+              "outcome": "validated"
+            },
+            {
+              "stage": "prepare-human-review",
+              "outcome": "ready"
+            }
+          ]
+        }
+      },
+      "passed": true,
+      "mismatches": {}
+    }
+  ]
+}

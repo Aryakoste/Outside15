@@ -1,0 +1,62 @@
+{
+  "note": "The east entrance has no steps and the gate is open. The path is clear, but there is no shade.",
+  "model": "gemma3:4b",
+  "installed_model": {
+    "name": "gemma3:4b",
+    "model": "gemma3:4b",
+    "modified_at": "2026-10-12T10:10:01.8179002+05:30",
+    "size": 3350272403,
+    "digest": "68ceab7e468a31c988b44d5a4984a0e21f58c4f7158c6ce29c1804babac38df7",
+    "details": {
+      "parent_model": "dhiltgen/gemma3:4b-it-q4_K_M-llamacpp",
+      "format": "gguf",
+      "family": "gemma3",
+      "families": [
+        "gemma3",
+        "clip"
+      ],
+      "parameter_size": "3.9B",
+      "quantization_level": "Q4_K_M"
+    },
+    "capabilities": [
+      "completion",
+      "vision"
+    ]
+  },
+  "latency_ms": 8656,
+  "recorded_at": "2026-10-12T04:43:17.200788+00:00",
+  "recording_kind": "Genuine local Ollama inference; replay is not live inference",
+  "result": {
+    "amenity": "entrance",
+    "status": "usable",
+    "step_free": "yes",
+    "shade": "no",
+    "summary": "East entrance has no steps and the gate is open. Path is clear with no shade.",
+    "evidence": "The east entrance has no steps and the gate is open. The path is clear, but there is no shade.",
+    "model": "gemma3:4b",
+    "latency_ms": 8656,
+    "source": "live",
+    "inference": {
+      "eval_count": 78,
+      "prompt_eval_count": 483,
+      "agent": "outside15-observer",
+      "transport": "local Ollama OpenAI-compatible API"
+    },
+    "workflow": {
+      "engine": "Mastra",
+      "id": "outside15-observation",
+      "attempts": 1,
+      "human_review_required": true,
+      "events": [
+        {
+          "stage": "extract-and-ground",
+          "outcome": "validated"
+        },
+        {
+          "stage": "prepare-human-review",
+          "outcome": "ready"
+        }
+      ]
+    }
+  }
+}
